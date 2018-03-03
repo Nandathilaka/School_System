@@ -9,3 +9,20 @@ D:\UCSC\3rd Year\C#\School System\SchoolSystem\obj\Debug\SchoolSystem.csproj.Cor
 D:\UCSC\3rd Year\C#\School System\SchoolSystem\obj\Debug\SchoolSystem.exe
 D:\UCSC\3rd Year\C#\School System\SchoolSystem\obj\Debug\SchoolSystem.pdb
 D:\UCSC\3rd Year\C#\School System\SchoolSystem\obj\Debug\SchoolSystem.Main.resources
+D:\UCSC\3rd Year\C#\School_System\bin\Debug\SchoolSystem.exe.config
+D:\UCSC\3rd Year\C#\School_System\bin\Debug\SchoolSystem.exe
+D:\UCSC\3rd Year\C#\School_System\bin\Debug\SchoolSystem.pdb
+D:\UCSC\3rd Year\C#\School_System\obj\Debug\SchoolSystem.csprojResolveAssemblyReference.cache
+D:\UCSC\3rd Year\C#\School_System\obj\Debug\SchoolSystem.Form1.resources
+D:\UCSC\3rd Year\C#\School_System\obj\Debug\SchoolSystem.Main.resources
+D:\UCSC\3rd Year\C#\School_System\obj\Debug\SchoolSystem.Properties.Resources.resources
+D:\UCSC\3rd Year\C#\School_System\obj\Debug\SchoolSystem.csproj.GenerateResource.Cache
+D:\UCSC\3rd Year\C#\School_System\obj\Debug\SchoolSystem.csproj.CoreCompileInputs.cache
+D:\UCSC\3rd Year\C#\School_System\obj\Debug\SchoolSystem.exe
+D:\UCSC\3rd Year\C#\School_System\obj\Debug\SchoolSystem.pdb
+D:\UCSC\3rd Year\C#\School_System\obj\Debug\SchoolSystem.EmployeeProfile.resources
+D:\UCSC\3rd Year\C#\School_System\obj\Debug\SchoolSystem.StudentAttendence.resources
+D:\UCSC\3rd Year\C#\School_System\obj\Debug\SchoolSystem.StudentProfile.resources
+D:\UCSC\3rd Year\C#\School_System\obj\Debug\SchoolSystem.TimeTable.resources
+D:\UCSC\3rd Year\C#\School_System\obj\Debug\SchoolSystem.EmployeeAttendance.resources
+D:\UCSC\3rd Year\C#\School_System\obj\Debug\SchoolSystem.Calander.resources
