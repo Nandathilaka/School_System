@@ -89,6 +89,12 @@
     <Compile Include="StudentProfile.Designer.cs">
       <DependentUpon>StudentProfile.cs</DependentUpon>
     </Compile>
+    <Compile Include="Student\NewStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\NewStudent.Designer.cs">
+      <DependentUpon>NewStudent.cs</DependentUpon>
+    </Compile>
     <Compile Include="TimeTable.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,9 @@
     <EmbeddedResource Include="StudentProfile.resx">
       <DependentUpon>StudentProfile.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Student\NewStudent.resx">
+      <DependentUpon>NewStudent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TimeTable.resx">
       <DependentUpon>TimeTable.cs</DependentUpon>
     </EmbeddedResource>
@@ -140,6 +149,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

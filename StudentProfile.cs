@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SchoolSystem.Student;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,6 +23,14 @@ namespace SchoolSystem
             Main main = new Main();
             main.Show();
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            NewStudent newStudent = new NewStudent();
+            newStudent.Show();
+            this.Hide();
+                 
         }
     }
 }
