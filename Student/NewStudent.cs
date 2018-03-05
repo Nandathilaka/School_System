@@ -40,14 +40,29 @@ namespace SchoolSystem.Student
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\user\Documents\SchoolSystem.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\user\Documents\schoolsystem.mdf;Integrated Security=True;Connect Timeout=30");
             //SqlDataAdapter sda = new SqlDataAdapter("insert into student(studentid,fname,lname,address,birthday,gender,joineddate,custodian,phonenumber) values ('" + txtStudentID.Text + "','" + txtfirstname.Text + "','" + txtlastname.Text + "','" + txtaddress.Text + "','" + dateTimePickerBirthdat.Text + "','" + radioButtonMale.Text + "','" + dateTimePickerJoinedDate.Text + "','" + txtCustodiam.Text + "','" + txtPhoneNumber.Text + "');
             //DataTable dt = new DataTable();
-            con.Open();
-            SqlCommand command = new SqlCommand("INSERT INTO student(studentid,fname,lname,address,birthday,gender,joineddate,custodian,phonenumber) VALUES ('" + txtStudentID.Text + "','" + txtfirstname.Text + "','" + txtlastname.Text + "','" + txtaddress.Text + "','" + dateTimePickerBirthdat.Text + "','" + radioButtonMale.Text + "','" + dateTimePickerJoinedDate.Text + "','" + txtCustodiam.Text + "','" + txtPhoneNumber.Text + "'", con);
-            Console.WriteLine("Thilina");
-            command.ExecuteNonQuery();
-            con.Close();
+            try
+            {
+                con.Open();
+                SqlCommand command = new SqlCommand("INSERT INTO student(studentid,fname,lname,address,birthday,gender,joineddate,custodian,phonenumber) VALUES ('" + txtStudentID.Text + "','" + txtfirstname.Text + "','" + txtlastname.Text + "','" + txtaddress.Text + "','" + dateTimePickerBirthdat.Value + "','" + radioButtonMale.Text + "','" + dateTimePickerJoinedDate.Value + "','" + txtCustodiam.Text + "','" + txtPhoneNumber.Text+ "')", con);
+                Console.WriteLine("Thilina");
+                command.ExecuteNonQuery();
+                Console.WriteLine("Chamika");
+                MessageBox.Show("Insert Successfully");
+
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Insert Error :"+ex.Message);
+            }
+            finally {
+                con.Close();
+            }
+            
+            
+            
             
         }
     }
