@@ -27,3 +27,4 @@ D:\UCSC\3rd Year\C#\School_System\obj\Debug\SchoolSystem.TimeTable.resources
 D:\UCSC\3rd Year\C#\School_System\obj\Debug\SchoolSystem.EmployeeAttendance.resources
 D:\UCSC\3rd Year\C#\School_System\obj\Debug\SchoolSystem.Calander.resources
 D:\UCSC\3rd Year\C#\School_System\obj\Debug\SchoolSystem.Student.NewStudent.resources
+D:\UCSC\3rd Year\C#\School_System\obj\Debug\SchoolSystem.Employee.NewEmployee.resources

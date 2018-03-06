@@ -9,32 +9,26 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SchoolSystem.Student
+namespace SchoolSystem.Employee
 {
-    public partial class NewStudent : Form
+    public partial class NewEmployee : Form
     {
-        public NewStudent()
+        public NewEmployee()
         {
             InitializeComponent();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //go to Student Profile
-            StudentProfile studentProfile = new StudentProfile();
-            studentProfile.Show();
-
-            //hide this interface
+            EmployeeProfile employeeProfile = new EmployeeProfile();
+            employeeProfile.Show();
             this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //go to Student Profile
-            StudentProfile studentProfile = new StudentProfile();
-            studentProfile.Show();
-
-            //hide this interface
+            Main main = new Main();
+            main.Show();
             this.Hide();
         }
 
@@ -48,34 +42,35 @@ namespace SchoolSystem.Student
                 con.Open();
                 if (radioButtonMale.Checked)
                 {
-                    SqlCommand command = new SqlCommand("INSERT INTO student(studentid,fname,lname,address,birthday,gender,joineddate,custodian,phonenumber) VALUES ('" + txtStudentID.Text + "','" + txtfirstname.Text + "','" + txtlastname.Text + "','" + txtaddress.Text + "','" + dateTimePickerBirthdat.Value + "','" + radioButtonMale.Text + "','" + dateTimePickerJoinedDate.Value + "','" + txtCustodiam.Text + "','" + txtPhoneNumber.Text + "')", con);
+                    SqlCommand command = new SqlCommand("INSERT INTO employee(empid,fname,lname,gender,address,nic,birthday,subject,grade,phonenumber,joineddate) VALUES ('" + txtEmpId.Text + "','" + txtFname.Text + "','" + txtLname.Text + "','" + radioButtonMale.Text + "','" + txtAddress.Text + "','" + txtNIC.Text + "','" + dateTimePickerBirthday.Value + "','" + comboBoxSubject.Text + "','" + comboBoxGrade.Text + "','" + txtphonenumber.Text + "','" + dateTimePickerJoinedDate.Value + "')", con);
                     int i = command.ExecuteNonQuery();
                     if (i != 0)
                     {
                         MessageBox.Show(i + " Data Insert Successfully");
                     }
                 }
-                if(radioButtonFemale.Checked){
-                    SqlCommand command = new SqlCommand("INSERT INTO student(studentid,fname,lname,address,birthday,gender,joineddate,custodian,phonenumber) VALUES ('" + txtStudentID.Text + "','" + txtfirstname.Text + "','" + txtlastname.Text + "','" + txtaddress.Text + "','" + dateTimePickerBirthdat.Value + "','" + radioButtonFemale.Text + "','" + dateTimePickerJoinedDate.Value + "','" + txtCustodiam.Text + "','" + txtPhoneNumber.Text + "')", con);
+                if (radioButtonFemale.Checked)
+                {
+                    SqlCommand command = new SqlCommand("INSERT INTO employee(empid,fname,lname,gender,address,nic,birthday,subject,grade,phonenumber,joineddate) VALUES ('" + txtEmpId.Text + "','" + txtFname.Text + "','" + txtLname.Text + "','" + radioButtonFemale.Text + "','" + txtAddress.Text + "','" + txtNIC.Text + "','" + dateTimePickerBirthday.Value + "','" + comboBoxSubject.Text + "','" + comboBoxGrade.Text + "','" + txtphonenumber.Text + "','" + dateTimePickerJoinedDate.Value + "')", con);
                     int i = command.ExecuteNonQuery();
                     if (i != 0)
                     {
                         MessageBox.Show(i + " Data Insert Successfully");
                     }
                 }
-              
+
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("Insert Error :"+ex.Message);
+                MessageBox.Show("Insert Error :" + ex.Message);
             }
-            finally {
+            finally
+            {
                 con.Close();
             }
-            
-            
-            
-            
+
         }
+
+       
     }
 }
